@@ -1,17 +1,19 @@
-#Rewrite the high_low.py program from section Decisions to use an random integer between 0 and 99
-#instead of the hard-coded 78. Use the Python documentation to find an appropriate module and function to do this.
-
+#this imports the random module to python
 import random
 
+#This code uses the random module to create a number at random between the ranges of 1-100 and then sets variables of guess and count to what is needed to start.
 number = random.randint(1, 100)
 guess = -1 
 count = 0
 
+
+#This code creates a while loop that breaks when the guess is correct to the random number generated above. It also breaks once 5 guesses has been reached. 
+#If you guess higher or lower than the number generated it will give you a clue to guess higher or lower.
 print("Guess the number! You must guess within 5 guesses to win!")
 while guess != number: 
     guess = int(input("Is it..."))
     if guess == number: 
-        print("FUCKIN YASSS YOU DID IT")
+        print("WELL DONE, YOU DID IT!")
     elif guess < number:
         print("Its higher then that, guess again!")
         count = count + 1
